@@ -2,7 +2,9 @@
 
 $parola = $_GET["parola"];
 
-$parola2 = str_replace($parola,"***",$paragrafo);
+$censura = "***";
+
+$parola2 = str_replace($parola,$censura,$paragrafo);
 
 $paragrafo = "Lorem ipsum, dolor sit amet consectetur adipisicing elit.";
 
@@ -24,6 +26,8 @@ $paragrafo = "Lorem ipsum, dolor sit amet consectetur adipisicing elit.";
 
     <p> <?php echo $paragrafo ?> </p>
 
+    <h5>il paragrafo è lungo <?php strlen($paragrafo) ?></h5>
+
     <h3>Inserisci la parola che vuoi censurare</h3>
 
     <form action="" method="GET">
@@ -34,6 +38,11 @@ $paragrafo = "Lorem ipsum, dolor sit amet consectetur adipisicing elit.";
     </form>
 
     <h4>la parola che hai scelto è <?php echo $parola ?>  </h4>
+
+    <pre>
+       var_dump($parola) 
+    </pre>
+    
 
 </body>
 
