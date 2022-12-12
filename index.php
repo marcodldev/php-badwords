@@ -4,10 +4,9 @@ $parola = $_GET["parola"];
 
 $censura = "***";
 
-$parola2 = str_replace($parola,$censura,$paragrafo);
-
 $paragrafo = "Lorem ipsum, dolor sit amet consectetur adipisicing elit.";
 
+$parola2 = str_replace($parola,$censura,$paragrafo);
 ?> 
 
 <!DOCTYPE html>
@@ -40,11 +39,6 @@ $paragrafo = "Lorem ipsum, dolor sit amet consectetur adipisicing elit.";
     <h4>la parola che hai scelto è <?php echo $parola ?>  </h4>
 
     <p> <?php echo $parola2 ?> </p>
-
-    <?php    
-       var_dump($parola2) 
-    
- ?>
     
 
 </body>
